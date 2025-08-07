@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Storck's Website Project</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
   <style>
     html { scroll-behavior: smooth; }
-
     .fade-up {
       opacity: 0;
       transform: translateY(20px);
@@ -40,9 +40,10 @@
     <div class="absolute inset-0 bg-black/50"></div>
     <div class="relative bg-white/10 backdrop-blur-lg p-12 rounded-3xl shadow-2xl max-w-2xl text-center">
       <h2 class="text-5xl font-serif font-semibold text-white mb-4 drop-shadow-lg animate-fadeIn">Website by Storck</h2>
-      <p class="text-xl text-gray-200 italic">Projeto de site</p>
+      <p class="text-xl text-gray-200 italic">Projeto de site </p>
     </div>
   </section>
+
 
  <!-- Sobre -->
 <section id="sobre" class="py-20 bg-gradient-to-r from-[#0f2b2d] to-[#112f35]">
@@ -62,8 +63,8 @@
   </div>
 </section>
 
-  <!-- Galeria de Projetos -->
-  <section id="galeria" class="py-20 bg-gradient-to-r from-[#0f2b2d] to-[#112f35]">
+  <!-- Galeria -->
+  <section id="galeria" data-aos="fade-up" class="py-20 bg-gradient-to-r from-[#0f2b2d] to-[#112f35]">
     <div class="container mx-auto px-4">
       <h2 class="text-4xl font-bold text-center text-[#1e3a5f] mb-12 tracking-wide fade-up">Projetos</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
@@ -71,7 +72,7 @@
         <div class="bg-white/10 backdrop-blur-md rounded-2xl h-52 flex items-center justify-center shadow-lg border border-white/20 relative group overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:border-white/40">
           <span class="text-gray-300 text-lg font-semibold opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 absolute">Coming Soon</span>
         </div>
-        <!-- Repetido mais 3 vezes... -->
+        <!-- Repetidos -->
         <div class="bg-white/10 backdrop-blur-md rounded-2xl h-52 flex items-center justify-center shadow-lg border border-white/20 relative group overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:border-white/40">
           <span class="text-gray-300 text-lg font-semibold opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 absolute">Coming Soon</span>
         </div>
@@ -85,18 +86,27 @@
     </div>
   </section>
 
-  <!-- Contato (ATUALIZADO) -->
-  <section id="contato" class="py-20 bg-gradient-to-r from-[#0f2b2d] to-[#112f35] relative">
+  <!-- Contato -->
+  <section id="contato" data-aos="fade-up" class="py-20 bg-gradient-to-r from-[#0f2b2d] to-[#112f35] relative">
     <!-- Botões laterais -->
     <div class="fixed top-1/2 left-6 transform -translate-y-1/2 flex flex-col gap-4 z-50">
-      <a href="https://wa.me/SEUNUMERO" target="_blank" class="bg-green-500 p-3 rounded-full shadow-md hover:scale-110 transition" title="WhatsApp">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-6 h-6"><path d="M20.52 3.48..."/></svg>
+      <!-- WhatsApp -->
+      <a href="https://wa.me/SEUNUMERO" target="_blank" class="bg-green-500 p-3 rounded-full shadow-md hover:scale-110 transition animate-bounce" title="WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-6 h-6">
+          <path d="..."/>
+        </svg>
       </a>
-      <a href="https://instagram.com/MiguelStorck" target="_blank" class="bg-pink-500 p-3 rounded-full shadow-md hover:scale-110 transition" title="Instagram">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-6 h-6"><path d="M7.75 2..."/></svg>
+      <!-- Instagram -->
+      <a href="https://instagram.com/MiguelStorck" target="_blank" class="bg-pink-500 p-3 rounded-full shadow-md hover:scale-110 transition animate-bounce" title="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-6 h-6">
+          <path d="..."/>
+        </svg>
       </a>
-      <button onclick="copiarEmail()" class="bg-blue-600 p-3 rounded-full shadow-md hover:scale-110 transition relative" title="Copiar E-mail">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-6 h-6"><path d="M20 4H4c..."/></svg>
+      <!-- Copiar Email -->
+      <button onclick="copiarEmail()" class="bg-blue-600 p-3 rounded-full shadow-md hover:scale-110 transition animate-bounce relative" title="Copiar E-mail">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-6 h-6">
+          <path d="..."/>
+        </svg>
         <span id="copiadoMsg" class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs text-green-400 hidden">Copiado!</span>
       </button>
     </div>
@@ -104,13 +114,21 @@
     <div class="container mx-auto px-6 max-w-2xl">
       <div class="backdrop-blur-2xl p-12 rounded-3xl shadow-2xl fade-up">
         <h2 class="text-3xl font-bold text-center mb-10 text-white">Contato</h2>
-        <form action="https://formsubmit.co/Contato.MStorck@gmail.com" method="POST" class="space-y-6">
+
+        <form action="https://formsubmit.co/Contato.Mstorck@gmail.com" method="POST" class="space-y-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
           <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="https://suaurl.com/obrigado">
+          <input type="hidden" name="_next" value="https://mstorck-02.github.io/ProjetoSite-1/">
+
           <input type="text" name="nome" placeholder="Seu nome" required class="w-full p-4 bg-gray-800 text-white placeholder-gray-400 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"/>
           <input type="email" name="email" placeholder="Seu e-mail" required class="w-full p-4 bg-gray-800 text-white placeholder-gray-400 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"/>
-          <textarea name="mensagem" rows="6" placeholder="Sua mensagem" required class="w-full p-4 bg-gray-800 text-white placeholder-gray-400 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-          <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 rounded-xl shadow-lg transition transform hover:-translate-y-1 hover:shadow-2xl">Enviar Mensagem</button>
+          <div class="sm:col-span-2">
+            <textarea name="mensagem" rows="6" placeholder="Sua mensagem" required class="w-full p-4 bg-gray-800 text-white placeholder-gray-400 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+          </div>
+          <div class="sm:col-span-2">
+            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 rounded-xl shadow-lg transition transform hover:-translate-y-1 hover:shadow-2xl">
+              Enviar Mensagem
+            </button>
+          </div>
         </form>
       </div>
     </div>
@@ -118,12 +136,11 @@
 
   <!-- Footer -->
   <footer class="bg-[#0a1e1f] text-center py-6 text-sm text-gray-400">
-    © 2025 Storck. Todos os direitos reservados.
+    © 2025 Miguel Storck. Todos os direitos reservados.
   </footer>
 
   <!-- Scripts -->
   <script>
-    // Scroll Animation
     const faders = document.querySelectorAll('.fade-up');
     const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
     const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
@@ -135,9 +152,8 @@
     }, appearOptions);
     faders.forEach(fader => { appearOnScroll.observe(fader); });
 
-    // Copiar email
     function copiarEmail() {
-      const email = "Contato.MStorck@gmail.com";
+      const email = "AliceWerneck080@gmail.com";
       navigator.clipboard.writeText(email).then(() => {
         const aviso = document.getElementById("copiadoMsg");
         aviso.classList.remove("hidden");
@@ -146,7 +162,21 @@
     }
   </script>
 
+  <!-- Tawk.to Live Chat -->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/5f6e0ddf4704467e89f03af5/default';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s1.style.zIndex = '999999 !important';
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>
-
-
